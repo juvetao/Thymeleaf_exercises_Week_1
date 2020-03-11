@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+<!--    <link rel ="stylesheet" th:href = "@{/css/contact.css}"/>-->
+</head>
+<body>
+    <div>
+        <h1>All contacts</h1>
+        <form th:action = "@{contact}" method="post">
+            <input type="text" id="contact" name="contact" placeholder="Enter a contact"/>
+            <button type="submit">Send</button>
+
+            <ul>
+                <li th:each = "contact: ${contacts}">
+                    <p th:text = "${contact}"></p>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

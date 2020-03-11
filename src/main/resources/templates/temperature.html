@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+    <div>
+        <h1>See your body status:</h1>
+        <form th:action = "@{temperature}" method = "get">
+            <input type="text" id="temperature" name="temperature" placeholder="Enter your temperature"/>
+            <button type="submit">Confirm</button>
+            <h2 th:text=${temperature}></h2>
+        </form>
+    </div>
+</body>
+</html>
